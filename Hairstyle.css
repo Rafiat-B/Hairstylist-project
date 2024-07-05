@@ -1,0 +1,22 @@
+body{
+    background-color: w;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    background-color: white;
+    height: 70px;
+}
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    color: black;
+    
+}
+.navigation a:hover {
+    background-color: wheat;
+}
+nav li {
+    list-style-type:none ;
+    
+}
