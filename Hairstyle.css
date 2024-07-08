@@ -9,14 +9,93 @@ header{
 }
 .navigation {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));/*px is column width, fr remaining space*/
     color: black;
+    gap: 1px;
     
 }
-.navigation a:hover {
-    background-color: wheat;
+
+.navigation li a:hover {
+    color: brown;
 }
 nav li {
     list-style-type:none ;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
     
+}
+
+.intro {
+    padding: 10px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-out, transform 2.5s ease-out;
+    }
+
+.intro.pop-out {
+    opacity: 1;
+    transform: scale(1);
+}
+.main-intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.intro-image {
+    padding: 0 0 20px 100px;
+    display: flex;
+    gap: 10px;
+    width: 80%;
+}
+
+.flip {
+    transition: transform 0.15s ease;
+}
+.flip.flipped {
+    transform: scaleX(-1);
+}
+
+.Services {
+    background-color: rgb(98, 75, 75);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.Services h1 {
+    font-size: 30px;
+}
+.S2{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(70px, 1fr));
+    grid-template-rows: repeat(2, minmax(40px, 1fr));
+    padding: 10px;
+    
+}
+.S2 p {
+    font-style: italic;
+}
+#footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 10px;
+}
+.footer-column li{
+    padding-bottom: 15px;
+    list-style-type: none;
+}
+
+.footer-column li a {
+    text-decoration: none;
+    color: black;
+}
+footer p {
+    text-align: center;
+    font-style: italic;
+    font-size:small;
+}
+.footer-column li a:hover {
+    color: brown;
 }
