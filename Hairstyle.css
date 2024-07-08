@@ -8,11 +8,22 @@ header{
     height: 70px;
 }
 .navigation {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));/*px is column width, fr remaining space*/
-    color: black;
-    gap: 1px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));px is column width, fr remaining space */
+    /* color: black; */
+    /* gap: 1px; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 10px;
+    padding: 0px 20px;
     
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .navigation li a:hover {
@@ -26,6 +37,15 @@ nav li a {
     text-decoration: none;
     color: black;
     
+}
+
+.active::after {
+	content: "";
+	background: #410002;
+	display: block;
+	height: 3px;
+	width: 20px;
+	margin: 5px auto 5px;
 }
 
 .intro {
@@ -42,6 +62,7 @@ nav li a {
 .main-intro {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 55px 20px;
 }
 
 .intro-image {
