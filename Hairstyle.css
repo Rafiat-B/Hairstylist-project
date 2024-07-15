@@ -31,7 +31,7 @@ nav li {
 nav li a {
     text-decoration: none;
     color: black;
-    
+    font-size: 18px;
 }
 
 .active::after {
@@ -135,4 +135,24 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.nav_btns {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn {
+    
+
+    font-weight: 700;
+	padding: 10px 16px;
+	background-color: transparent;
+	border: solid 1px blue;
+	background: blue;
+	border-radius: 8px;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
 }
