@@ -37,3 +37,36 @@ setInterval(()=> Imagechange(1), delay);
 //         image.classList.add('flipped');
 //     });
 // };() => ChangeImages(1), delay)
+
+//************About Us */
+// Add a class to the navigation when the page is scrolled
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.navigation');
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Add hover effect to team members
+document.querySelectorAll('.team-member').forEach(member => {
+  member.addEventListener('mouseenter', function() {
+      this.classList.add('hover');
+  });
+  member.addEventListener('mouseleave', function() {
+      this.classList.remove('hover');
+  });
+});
+
+//Fading effect
+window.addEventListener('load', () => {
+  document.querySelectorAll('.fade-in').forEach(element => {
+      element.classList.add('visible');
+  });
+});
+
+// Sliding effect
+function slideInOnLoad() {
+  document.querySelectorAll('.slide-in').forEach(element => {
+    element.classList.add('visible');
+  });
+}
+
+window.addEventListener('load', slideInOnLoad);

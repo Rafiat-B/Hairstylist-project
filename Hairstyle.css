@@ -125,3 +125,54 @@ footer p {
 #footer h3{
     text-align: center;
 }
+/* About us */
+#our-story {
+    background-color: gold;
+    padding: 10px 20px 20px 20px;
+    margin-top:15px;
+}
+#our-mission {
+    background-color: gold;
+    padding: 10px 20px 20px 20px;
+    margin-top:15px;
+}
+
+#meet-the-team {
+    background-color: gold;
+    padding: 10px 20px 20px 20px;
+    margin-top:15px;
+    overflow: hidden;
+}
+.team-member {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-template-rows: repeat(1, minmax(40px, 1fr));
+    padding: 50px;
+    transition: transform 0.3s ease-in-out; /*hover effect*/
+}
+/*hover effect*/
+.team-member.hover {
+    transform: scale(1.1);
+}
+
+.team-member p {
+    font-style: italic;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.slide-in {
+    transform: translateX(-100%);
+    transition: transform 5s ease-in-out;
+}
+
+.slide-in.visible {
+    transform: translateX(0);
+}
