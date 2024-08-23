@@ -70,3 +70,9 @@ function slideInOnLoad() {
 }
 
 window.addEventListener('load', slideInOnLoad);
+
+//************Our Stylists *
+window.addEventListener('load', () => {
+  const stylistsSection = document.querySelectorAll('.the-stylist');
+  stylistsSection.classList.add('visible');
+});

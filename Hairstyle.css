@@ -158,7 +158,7 @@ footer p {
 	font-size: 18px;
 	cursor: pointer;
 }
-/* About us */
+/* ABOUT US */
 #our-story {
     background-color: gold;
     padding: 10px 20px 20px 20px;
@@ -208,4 +208,26 @@ footer p {
 
 .slide-in.visible {
     transform: translateX(0);
+}
+
+/* OUR STYLIST */
+.the-stylists {
+    background-color: purple;
+    padding: 20px;
+    margin: 50px 0 50px 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.the-stylists.visible {
+    opacity: 1;
+}
+
+.style-image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    
 }
