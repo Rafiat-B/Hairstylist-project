@@ -1,5 +1,5 @@
 body{
-    background-color: w;
+    background-color: whitesmoke;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -152,7 +152,7 @@ footer p {
 	padding: 10px 16px;
 	background-color: transparent;
 	border: solid 1px blue;
-	background: blue;
+	background: rgb(64, 64, 227);
 	border-radius: 8px;
 	color: white;
 	font-size: 18px;
@@ -160,18 +160,18 @@ footer p {
 }
 /* ABOUT US */
 #our-story {
-    background-color: gold;
+    background-color: rgb(98, 75, 75);
     padding: 10px 20px 20px 20px;
     margin-top:15px;
 }
 #our-mission {
-    background-color: gold;
+    background-color: rgb(98, 75, 75);
     padding: 10px 20px 20px 20px;
     margin-top:15px;
 }
 
 #meet-the-team {
-    background-color: gold;
+    background-color: rgb(98, 75, 75);
     padding: 10px 20px 20px 20px;
     margin-top:15px;
     overflow: hidden;
@@ -182,6 +182,7 @@ footer p {
     grid-template-rows: repeat(1, minmax(40px, 1fr));
     padding: 50px;
     transition: transform 0.3s ease-in-out; /*hover effect*/
+    justify-items: center;
 }
 /*hover effect*/
 .team-member.hover {
@@ -212,15 +213,15 @@ footer p {
 
 /* OUR STYLIST */
 .the-stylists {
-    background-color: purple;
+    background-color: rgb(98, 75, 75);
     padding: 20px;
     margin: 50px 0 50px 0;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out; 
 }
 
 .the-stylists.visible {
-    opacity: 1;
+    opacity: 0;
 }
 
 .style-image {
@@ -230,4 +231,49 @@ footer p {
     gap: 20px;
     justify-content: space-between;
     
+}
+
+/*CONTACT PAGE*/
+.contact {
+    background-color: rgb(98, 75, 75);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 40px;
+    justify-content: center;
+    align-content:start ;
+    width: 70%;
+}
+
+.contact-form {
+    display: inline-block;
+    justify-items:center;
+    
+    
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#sub {
+    background-color: rgb(64, 64, 227);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    align-self: center;
+    
+}
+
+#sub:hover {
+    background-color: #333;
+    color: blue;
 }

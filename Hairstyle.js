@@ -73,6 +73,43 @@ window.addEventListener('load', slideInOnLoad);
 
 //************Our Stylists *
 window.addEventListener('load', () => {
-  const stylistsSection = document.querySelectorAll('.the-stylist');
+  const stylistsSection = document.querySelectorAll('.the-stylists');
   stylistsSection.classList.add('visible');
 });
+
+//************Contact *
+
+function submitGoogleForm() {
+  // e.preventDefault();
+  // Get form values
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  // Simple validation
+  if (name === '') {
+      alert('Please enter your name.');
+      return false;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email === '') {
+      alert('Please enter your email.');
+      return false;
+  } else if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+  }
+
+  if (message === '') {
+      alert('Please enter your message.');
+      return false;
+  }
+
+  // If validation passes, submit the form
+  document.querySelector('.contact-form').submit();
+  alert('Thank you! Your message has been sent.');
+
+  document.querySelector('.contact-form').reset();
+  window.location.href = 'Home.html';
+}
