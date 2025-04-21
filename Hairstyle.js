@@ -111,5 +111,5 @@ function submitGoogleForm() {
   alert('Thank you! Your message has been sent.');
 
   document.querySelector('.contact-form').reset();
-  window.location.href = 'Home.html';
+  window.location.href = 'https://www.technova.software';
 }

@@ -277,3 +277,7 @@ footer p {
     background-color: #333;
     color: blue;
 }
+
+#call-to-action a:visited {
+    color: blue; /* or any color you want */
+}
