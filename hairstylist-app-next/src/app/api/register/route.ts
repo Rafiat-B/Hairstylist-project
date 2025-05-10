@@ -1,27 +1,21 @@
 import { PrismaClient } from "@prisma/client";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
+export async function POST(req: Request) {
   try {
-    const { email, password, website, emailContact, phoneContact, contactPreference } = req.body;
+    const { email, password, website, emailContact, phoneContact, contactPreference } = await req.json();
 
-    // Check if email already exists
     const existingStylist = await prisma.stylist.findUnique({ where: { email } });
     if (existingStylist) {
-      return res.status(400).json({ error: "Email already exists" });
+      return NextResponse.json({ error: "Email already exists" }, { status: 400 });
     }
 
-    // Create new stylist
     const stylist = await prisma.stylist.create({
       data: {
         email,
-        password, // Already hashed in the frontend
+        password,
         website,
         emailContact,
         phoneContact,
@@ -31,9 +25,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
     });
 
-    return res.status(200).json(stylist);
+    return NextResponse.json(stylist, { status: 200 });
   } catch (error) {
     console.error("Error in registration:", error);
-    return res.status(500).json({ error: "Registration failed" });
+    return NextResponse.json({ error: "Registration failed" }, { status: 500 });
   }
 }
