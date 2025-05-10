@@ -63,6 +63,7 @@ export default function Registration() {
     <div className="bg-brown-700 rounded-lg font-sans p-6 mt-2 mb-2 max-w-2xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Stylist Registration</h1>
       {errorMessage && <p className="text-red-600 mb-4">{errorMessage}</p>}
+      {showDevMessage && <p className="text-yellow-600 mb-4">Under Development - Media upload feature coming soon!</p>}
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div>
           <label className="block text-lg font-medium mb-1">Email</label>
